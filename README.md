@@ -427,3 +427,7 @@ static get observedAttributes() {
   return ["active"];
 }
 ```
+
+## Codepen del Tab Webcomponent
+
+En este PEN puede verse el <a href="https://codepen.io/ivan_albizu/pen/abLQJxv" target="_blank" rel="noopener">WebComponente funcionando</a>
