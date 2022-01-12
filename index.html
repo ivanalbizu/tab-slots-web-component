@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <script src="./src/js/tab/app.js" defer></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      img {
+        max-width: 100%;
+      }
+      @media (min-width: 1200px) {
+        body {
+          flex-wrap: nowrap;
+        }
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      [aria-selected="true"] {
+        --color-tab-active-foreground: #fff;
+      }
+      [slot="panel"]:empty {
+        --width: 100%;
+        height: 250px;
+        background: linear-gradient(0.75turn, #fff, transparent),
+          linear-gradient(#eee, #eee),
+          radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
+          linear-gradient(#eee, #eee);
+        background-repeat: no-repeat;
+        background-size: var(--width) 250px, var(--width) 150px, 100px 100px,
+          225px 30px;
+        background-position: var(--width) 0, 0 0, 0px 160px, 50px 165px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <h2>First Instance Webcomponent.</h2>
+      <h2>Safari decides not to support Web components</h2>
+      <iga-tab active="2" style="--color-tab-active-background: #e66c4d">
+        <div slot="group-tabs" role="tablist">
+          <iga-tab-item>
+            <span slot="item">Tab 1</span>
+          </iga-tab-item>
+          <iga-tab-item>
+            <span slot="item">Tab 2</span>
+          </iga-tab-item>
+          <iga-tab-item>
+            <span slot="item">Third tab</span>
+          </iga-tab-item>
+          <iga-tab-item></iga-tab-item>
+        </div>
+        <main slot="group-panels" class="tabs__panels">
+          <iga-tab-panel>
+            <div slot="panel">
+              <p>
+                1 Lorem, ipsum consectetur dolor sit amet consectetur
+                adipisicing elit. Quia deleniti quisquam similique a rerum.
+              </p>
+              <p>
+                2 Lorem ipsum dolor sit amet c commodi, harum distinctio nulla
+                quibusdam dolorum consequatur minus. Quibusdam, sit?
+              </p>
+            </div>
+          </iga-tab-panel>
+          <iga-tab-panel>
+            <div slot="panel">
+              <p>
+                3 Lorem, ipsum dolor sit actetur adipisicing elit. Quia deleniti
+                quisquam similique a rerum.
+              </p>
+              <p>
+                4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                maxime commodi, harum distinctio nulla quibusdam dolorum
+                consequatur minus. Quibusdam, sit?
+              </p>
+            </div>
+          </iga-tab-panel>
+          <iga-tab-panel>
+            <div slot="panel"></div>
+          </iga-tab-panel>
+          <iga-tab-panel>
+            <div slot="panel">
+              <p>5 Lorem ipsum dolor sit amet c commodi, harum</p>
+              <img src="https://dummyimage.com/560x180/D2B48C/fff" alt="" />
+            </div>
+          </iga-tab-panel>
+        </main>
+      </iga-tab>
+    </section>
+
+    <section class="section">
+      <h2>First Instance Webcomponent.</h2>
+      <h2>Safari decides not to support Web components</h2>
+      <iga-tab justify="space-evenly">
+        <div slot="group-tabs" role="tablist">
+          <iga-tab-item>
+            <span slot="item">This That</span>
+          </iga-tab-item>
+          <iga-tab-item>
+            <span slot="item">That Those</span>
+          </iga-tab-item>
+          <iga-tab-item>
+            <span slot="item">Last Tab</span>
+          </iga-tab-item>
+        </div>
+        <main slot="group-panels" class="tabs__panels">
+          <iga-tab-panel>
+            <div slot="panel">
+              <h1>This is panel 1</h1>
+              <p>
+                1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
+                deleniti quisquam similique a rerum.
+              </p>
+              <p>
+                2 Lorem ipsum dolot maxime commodi, harum distinctio nulla
+                quibusdam dolorum consequatur minus. Quibusdam, sit?
+              </p>
+            </div>
+          </iga-tab-panel>
+          <iga-tab-panel>
+            <div slot="panel">
+              <p>
+                3 Lorem, ipsum dolor sit actetur adipisicing elit. Quia deleniti
+                quisquam similique a rerum.
+              </p>
+              <p>
+                4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                maxime commodi, harum distinctio nulla quibusdam dolorum
+                consequatur minus. Quibusdam, sit?
+              </p>
+            </div>
+          </iga-tab-panel>
+          <iga-tab-panel>
+            <div slot="panel"></div>
+          </iga-tab-panel>
+        </main>
+      </iga-tab>
+    </section>
+  </body>
+</html>
